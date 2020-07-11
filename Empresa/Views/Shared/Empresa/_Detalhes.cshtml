@@ -1,0 +1,290 @@
+﻿@model Projects.ViewModels.EmpresaViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" id="detalhes">
+    <div class="row text-left">
+        @using (Html.BeginForm("Salvar", "Empresa", FormMethod.Post))
+        {
+            <div class="col-lg-12">
+                <div class="row">
+                    <fieldset>
+                        <legend>Dados Principais</legend>
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.cnpj)</legend>
+                                @*<span>@Html.DisplayFor(m => m.cnpj)</span>*@
+                                @Html.TextBoxFor(m => m.cnpj, new { @readonly = true })
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-6 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.nome)</legend>
+                                @Html.TextBoxFor(m => m.nome, new { @readonly = true })
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.ultima_atualizacao)</legend>
+                                @Html.TextBoxFor(m => m.ultima_atualizacao, new { @readonly = true, @class = "date" })
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.abertura)</legend>
+                                @Html.TextBoxFor(m => m.abertura, new { @readonly = true })
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.situacao)</legend>
+                                <span>@Html.DisplayFor(m => m.situacao)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.data_situacao)</legend>
+                                <span>@Html.DisplayFor(m => m.data_situacao)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.tipo)</legend>
+                                <span>@Html.DisplayFor(m => m.tipo)</span>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="row">
+                    <fieldset>
+                        <legend>Demais Informações</legend>
+                        <div class="col-lg-6 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.natureza_juridica)</legend>
+                                <span>@Html.DisplayFor(m => m.natureza_juridica)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-6 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.fantasia)</legend>
+                                <span>@Html.DisplayFor(m => m.fantasia)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.motivo_situacao)</legend>
+                                <span>@Html.DisplayFor(m => m.motivo_situacao)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.data_situacao_especial)</legend>
+                                <span>@Html.DisplayFor(m => m.data_situacao_especial)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.efr)</legend>
+                                <span>@Html.DisplayFor(m => m.efr)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.capital_social)</legend>
+                                <span class="real">@Html.DisplayFor(m => m.capital_social)</span>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="row">
+                    <fieldset>
+                        <legend>Endereço Comercial</legend>
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.cep)</legend>
+                                <span class="cep">@Html.DisplayFor(m => m.cep)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-6 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.logradouro)</legend>
+                                <span>@Html.DisplayFor(m => m.logradouro)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.numero)</legend>
+                                <span>@Html.DisplayFor(m => m.numero)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.complemento)</legend>
+                                <span>@Html.DisplayFor(m => m.complemento)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.bairro)</legend>
+                                <span>@Html.DisplayFor(m => m.bairro)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.municipio)</legend>
+                                <span>@Html.DisplayFor(m => m.municipio)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.uf)</legend>
+                                <span>@Html.DisplayFor(m => m.uf)</span>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="row">
+                    <fieldset>
+                        <legend>Contato</legend>
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.telefone)</legend>
+                                <span>@Html.DisplayFor(m => m.telefone)</span>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-lg-3 div">
+                            <fieldset>
+                                <legend class="text-left">@Html.DisplayNameFor(m => m.email)</legend>
+                                <span>@Html.DisplayFor(m => m.email)</span>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="row">
+                    <fieldset>
+                        <legend>Atividade Principal</legend>
+                        @foreach (var item in Model.atividade_principal)
+                        {
+                            <div class="col-lg-9">
+                                <fieldset>
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.text)</legend>
+                                    <span>@Html.DisplayFor(modelItem => item.text)</span>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <fieldset>
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.code)</legend>
+                                    <span>@Html.DisplayFor(modelItem => item.code)</span>
+                                </fieldset>
+                            </div>
+                        }
+
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="row">
+                    <fieldset>
+                        <legend>Atividades Secundárias</legend>
+                        @foreach (var item in Model.atividades_secundarias)
+                        {
+                            <div class="col-lg-9">
+                                <fieldset>
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.text)</legend>
+                                    <span>@Html.DisplayFor(modelItem => item.text)</span>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <fieldset>
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.code)</legend>
+                                    <span>@Html.DisplayFor(modelItem => item.code)</span>
+                                </fieldset>
+                            </div>
+                        }
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="row">
+                    <fieldset>
+                        <legend>Sócios</legend>
+                        @foreach (var item in Model.qsa)
+                        {
+                            <div class="col-lg-6">
+                                <fieldset>
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.nome)</legend>
+                                    <span>@Html.DisplayFor(modelItem => item.nome)</span>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <fieldset>
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.qual)</legend>
+                                    <span>@Html.DisplayFor(modelItem => item.qual)</span>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <fieldset>
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.nome_rep_legal)</legend>
+                                    <span>@Html.DisplayFor(modelItem => item.nome_rep_legal)</span>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <fieldset>
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.qual_rep_legal)</legend>
+                                    <span>@Html.DisplayFor(modelItem => item.qual_rep_legal)</span>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <hr class="line" />
+                            </div>
+                        }
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="col-lg-12 div text-right">
+                <input class="btn" type="submit" value="Salvar" />
+            </div>
+        }
+    </div>
+</div>
