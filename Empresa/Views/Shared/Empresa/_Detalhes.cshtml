@@ -15,7 +15,6 @@
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.cnpj)</legend>
-                                @*<span>@Html.DisplayFor(m => m.cnpj)</span>*@
                                 @Html.TextBoxFor(m => m.cnpj, new { @readonly = true })
                             </fieldset>
                         </div>
@@ -44,21 +43,21 @@
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.situacao)</legend>
-                                <span>@Html.DisplayFor(m => m.situacao)</span>
+                                @Html.TextBoxFor(m => m.situacao, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.data_situacao)</legend>
-                                <span>@Html.DisplayFor(m => m.data_situacao)</span>
+                                @Html.TextBoxFor(m => m.data_situacao, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.tipo)</legend>
-                                <span>@Html.DisplayFor(m => m.tipo)</span>
+                                @Html.TextBoxFor(m => m.tipo, new { @readonly = true })
                             </fieldset>
                         </div>
                     </fieldset>
@@ -72,42 +71,42 @@
                         <div class="col-lg-6 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.natureza_juridica)</legend>
-                                <span>@Html.DisplayFor(m => m.natureza_juridica)</span>
+                                @Html.TextBoxFor(m => m.natureza_juridica, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-6 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.fantasia)</legend>
-                                <span>@Html.DisplayFor(m => m.fantasia)</span>
+                                @Html.TextBoxFor(m => m.fantasia, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.motivo_situacao)</legend>
-                                <span>@Html.DisplayFor(m => m.motivo_situacao)</span>
+                                @Html.TextBoxFor(m => m.motivo_situacao, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.data_situacao_especial)</legend>
-                                <span>@Html.DisplayFor(m => m.data_situacao_especial)</span>
+                                @Html.TextBoxFor(m => m.data_situacao_especial, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.efr)</legend>
-                                <span>@Html.DisplayFor(m => m.efr)</span>
+                                @Html.TextBoxFor(m => m.efr, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.capital_social)</legend>
-                                <span class="real">@Html.DisplayFor(m => m.capital_social)</span>
+                                @Html.TextBoxFor(m => m.capital_social, new { @readonly = true, @class = "real" })
                             </fieldset>
                         </div>
                     </fieldset>
@@ -121,49 +120,49 @@
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.cep)</legend>
-                                <span class="cep">@Html.DisplayFor(m => m.cep)</span>
+                                @Html.TextBoxFor(m => m.cep, new { @readonly = true, @class = "cep" })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-6 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.logradouro)</legend>
-                                <span>@Html.DisplayFor(m => m.logradouro)</span>
+                                @Html.TextBoxFor(m => m.logradouro, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.numero)</legend>
-                                <span>@Html.DisplayFor(m => m.numero)</span>
+                                @Html.TextBoxFor(m => m.numero, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.complemento)</legend>
-                                <span>@Html.DisplayFor(m => m.complemento)</span>
+                                @Html.TextBoxFor(m => m.complemento, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.bairro)</legend>
-                                <span>@Html.DisplayFor(m => m.bairro)</span>
+                                @Html.TextBoxFor(m => m.bairro, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.municipio)</legend>
-                                <span>@Html.DisplayFor(m => m.municipio)</span>
+                                @Html.TextBoxFor(m => m.municipio, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.uf)</legend>
-                                <span>@Html.DisplayFor(m => m.uf)</span>
+                                @Html.TextBoxFor(m => m.uf, new { @readonly = true })
                             </fieldset>
                         </div>
                     </fieldset>
@@ -177,14 +176,14 @@
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.telefone)</legend>
-                                <span>@Html.DisplayFor(m => m.telefone)</span>
+                                @Html.TextBoxFor(m => m.telefone, new { @readonly = true })
                             </fieldset>
                         </div>
 
                         <div class="col-lg-3 div">
                             <fieldset>
                                 <legend class="text-left">@Html.DisplayNameFor(m => m.email)</legend>
-                                <span>@Html.DisplayFor(m => m.email)</span>
+                                @Html.TextBoxFor(m => m.email, new { @readonly = true })
                             </fieldset>
                         </div>
                     </fieldset>
@@ -200,14 +199,14 @@
                             <div class="col-lg-9">
                                 <fieldset>
                                     <legend class="text-left">@Html.DisplayNameFor(modelItem => item.text)</legend>
-                                    <span>@Html.DisplayFor(modelItem => item.text)</span>
+                                    @Html.TextBoxFor(modelItem => item.text, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-3">
                                 <fieldset>
                                     <legend class="text-left">@Html.DisplayNameFor(modelItem => item.code)</legend>
-                                    <span>@Html.DisplayFor(modelItem => item.code)</span>
+                                    @Html.TextBoxFor(modelItem => item.code, new { @readonly = true })
                                 </fieldset>
                             </div>
                         }
@@ -225,14 +224,14 @@
                             <div class="col-lg-9">
                                 <fieldset>
                                     <legend class="text-left">@Html.DisplayNameFor(modelItem => item.text)</legend>
-                                    <span>@Html.DisplayFor(modelItem => item.text)</span>
+                                    @Html.TextBoxFor(modelItem => item.text, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-3">
                                 <fieldset>
                                     <legend class="text-left">@Html.DisplayNameFor(modelItem => item.code)</legend>
-                                    <span>@Html.DisplayFor(modelItem => item.code)</span>
+                                    @Html.TextBoxFor(modelItem => item.code, new { @readonly = true })
                                 </fieldset>
                             </div>
                         }
@@ -249,28 +248,28 @@
                             <div class="col-lg-6">
                                 <fieldset>
                                     <legend class="text-left">@Html.DisplayNameFor(modelItem => item.nome)</legend>
-                                    <span>@Html.DisplayFor(modelItem => item.nome)</span>
+                                    @Html.TextBoxFor(modelItem => item.nome, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-6">
                                 <fieldset>
                                     <legend class="text-left">@Html.DisplayNameFor(modelItem => item.qual)</legend>
-                                    <span>@Html.DisplayFor(modelItem => item.qual)</span>
+                                    @Html.TextBoxFor(modelItem => item.qual, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-6">
                                 <fieldset>
                                     <legend class="text-left">@Html.DisplayNameFor(modelItem => item.nome_rep_legal)</legend>
-                                    <span>@Html.DisplayFor(modelItem => item.nome_rep_legal)</span>
+                                    @Html.TextBoxFor(modelItem => item.nome_rep_legal, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-6">
                                 <fieldset>
                                     <legend class="text-left">@Html.DisplayNameFor(modelItem => item.qual_rep_legal)</legend>
-                                    <span>@Html.DisplayFor(modelItem => item.qual_rep_legal)</span>
+                                    @Html.TextBoxFor(model => item.qual_rep_legal, new { @readonly = true })
                                 </fieldset>
                             </div>
 

@@ -15,7 +15,7 @@ namespace Projects.Controllers.Empresa
 
         public PartialViewResult Detalhes()
         {
-            return new PartialViewResult() { ViewName = "Cnpj", ViewData = ViewData };
+            return new PartialViewResult() { ViewName = "~/Empresa/_Detalhes", ViewData = ViewData };
         }
 
         [HttpPost]
