@@ -2,5 +2,6 @@
 {
     public class Extra
     {
+        public int id { get; set; }
     }
 }
