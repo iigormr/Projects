@@ -10,7 +10,7 @@ namespace LanchesMac.Context
 
         }
 
-        public DbSet<Lanche> Lanches { get; set; }
-        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Lanche> LCH_LANCHES { get; set; }
+        public DbSet<Categoria> LCH_CATEGORIAS { get; set; }
     }
 }
