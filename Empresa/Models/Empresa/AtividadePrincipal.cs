@@ -11,8 +11,10 @@ namespace CNPJ.Models.Empresa
         }
 
         public int id { get; set; }
+        [StringLength(200)]
         [Display(Name = "Nome")]
         public string text { get; set; }
+        [StringLength(100)]
         [Display(Name = "Código")]
         public string code { get; set; }
         public int empresaId { get; set; }
