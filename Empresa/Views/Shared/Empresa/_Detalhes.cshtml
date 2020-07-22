@@ -1,4 +1,5 @@
-﻿@model Projects.ViewModels.EmpresaViewModel
+﻿@using System.Security.Cryptography.Xml
+@model Projects.ViewModels.EmpresaViewModel
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,7 +7,7 @@
 
 <div class="container" id="detalhes">
     <div class="row text-left">
-        @using (Html.BeginForm("Salvar", "Empresa", FormMethod.Post))
+        @using (Html.BeginForm("Salvar", "Empresa", FormMethod.Post, new { enctype = "application/json" }))
         {
             <div class="col-lg-12">
                 <div class="row">
@@ -194,23 +195,22 @@
                 <div class="row">
                     <fieldset>
                         <legend>Atividade Principal</legend>
-                        @foreach (var item in Model.atividade_principal)
+                        @for (var i = 0; i < Model.atividade_principal.Count; i++)
                         {
                             <div class="col-lg-9">
                                 <fieldset>
-                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.text)</legend>
-                                    @Html.TextBoxFor(modelItem => item.text, new { @readonly = true })
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => Model.atividade_principal[@i].text)</legend>
+                                    <input name="atividade_principal[@i][text]" value="@Model.atividade_principal[@i].text "/>
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-3">
                                 <fieldset>
-                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.code)</legend>
-                                    @Html.TextBoxFor(modelItem => item.code, new { @readonly = true })
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => Model.atividade_principal[@i].code)</legend>
+                                    <input name="atividade_principal[@i][code]" value="@Model.atividade_principal[@i].code " />
                                 </fieldset>
                             </div>
                         }
-
                     </fieldset>
                 </div>
             </div>
@@ -219,19 +219,19 @@
                 <div class="row">
                     <fieldset>
                         <legend>Atividades Secundárias</legend>
-                        @foreach (var item in Model.atividades_secundarias)
+                        @for (var i = 0; i < Model.atividades_secundarias.Count; i++)
                         {
                             <div class="col-lg-9">
                                 <fieldset>
-                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.text)</legend>
-                                    @Html.TextBoxFor(modelItem => item.text, new { @readonly = true })
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => Model.atividades_secundarias[@i].text)</legend>
+                                    @Html.TextBoxFor(modelItem => Model.atividades_secundarias[@i].text, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-3">
                                 <fieldset>
-                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.code)</legend>
-                                    @Html.TextBoxFor(modelItem => item.code, new { @readonly = true })
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => Model.atividades_secundarias[@i].code)</legend>
+                                    @Html.TextBoxFor(modelItem => Model.atividades_secundarias[@i].code, new { @readonly = true })
                                 </fieldset>
                             </div>
                         }
@@ -243,33 +243,33 @@
                 <div class="row">
                     <fieldset>
                         <legend>Sócios</legend>
-                        @foreach (var item in Model.qsa)
+                        @for (var i = 0; i < Model.qsa.Count; i++)
                         {
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.nome)</legend>
-                                    @Html.TextBoxFor(modelItem => item.nome, new { @readonly = true })
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => Model.qsa[@i].nome)</legend>
+                                    @Html.TextBoxFor(modelItem => Model.qsa[@i].nome, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.qual)</legend>
-                                    @Html.TextBoxFor(modelItem => item.qual, new { @readonly = true })
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => Model.qsa[@i].qual)</legend>
+                                    @Html.TextBoxFor(modelItem => Model.qsa[@i].qual, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.nome_rep_legal)</legend>
-                                    @Html.TextBoxFor(modelItem => item.nome_rep_legal, new { @readonly = true })
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => Model.qsa[@i].nome_rep_legal)</legend>
+                                    @Html.TextBoxFor(modelItem => Model.qsa[@i].nome_rep_legal, new { @readonly = true })
                                 </fieldset>
                             </div>
 
                             <div class="col-lg-6">
                                 <fieldset>
-                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => item.qual_rep_legal)</legend>
-                                    @Html.TextBoxFor(model => item.qual_rep_legal, new { @readonly = true })
+                                    <legend class="text-left">@Html.DisplayNameFor(modelItem => Model.qsa[@i].qual_rep_legal)</legend>
+                                    @Html.TextBoxFor(model => Model.qsa[@i].qual_rep_legal, new { @readonly = true })
                                 </fieldset>
                             </div>
 

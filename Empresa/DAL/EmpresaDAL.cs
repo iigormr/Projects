@@ -19,21 +19,21 @@ namespace Empresa.DAL
             //using (Connection = new SqlConnection(ConnectionString))
             //{
             //    Connection.Open();
-                   
+
             //    Parameters.Add(new SqlParameter("@CustomerID", custId));
 
             //    Dispose();
             //}
-            SqlConnection connection = new SqlConnection(ConnectionString);
+            //SqlConnection connection = new SqlConnection(ConnectionString);
 
-            SqlCommand cmdCommand = new SqlCommand("emp_SalvarEmpresa", connection);
+            //SqlCommand cmdCommand = new SqlCommand("emp_SalvarEmpresa", connection);
 
-            cmdCommand.CommandType = CommandType.StoredProcedure;
-            cmdCommand.Parameters.Add("@CNPJ", SqlDbType.VarChar, 15).Value = vm.cnpj;
+            //cmdCommand.CommandType = CommandType.StoredProcedure;
+            //cmdCommand.Parameters.Add("@CNPJ", SqlDbType.VarChar, 15).Value = vm.cnpj;
 
-            connection.Open();
-            cmdCommand.ExecuteNonQuery();
-            connection.Dispose();
+            //connection.Open();
+            //cmdCommand.ExecuteNonQuery();
+            //connection.Dispose();
         }
 
         public void Dispose()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Net.Http;
+using CNPJ.Models.Empresa;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Projects.ViewModels;
@@ -52,7 +53,6 @@ namespace Projects.Controllers.Empresa
         [HttpPost]
         public ActionResult Salvar(EmpresaViewModel vm)
         {
-
             return null;
         }
     }

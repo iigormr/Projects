@@ -9,5 +9,7 @@ namespace Empresa.Models.Empresa
 
         public bool free { get; set; }
         public bool database { get; set; }
+
+        public virtual Empresa Empresa { get; set; }
     }
 }

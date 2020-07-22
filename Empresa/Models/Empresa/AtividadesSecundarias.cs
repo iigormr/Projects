@@ -16,5 +16,6 @@ namespace CNPJ.Models.Empresa
         [Display(Name = "Código")]
         public string code { get; set; }
         public int empresaId { get; set; }
+        public virtual global::Empresa.Models.Empresa.Empresa Empresa { get; set; }
     }
 }
