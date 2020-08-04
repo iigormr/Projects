@@ -1,0 +1,43 @@
+﻿@model Projects.ViewModels.EmpresaViewModel
+
+<div class="col-lg-6 div">
+    <fieldset>
+        <legend class="text-left">@Html.DisplayNameFor(m => m.natureza_juridica)</legend>
+        @Html.TextBoxFor(m => m.natureza_juridica, new { @readonly = true })
+    </fieldset>
+</div>
+
+<div class="col-lg-6 div">
+    <fieldset>
+        <legend class="text-left">@Html.DisplayNameFor(m => m.fantasia)</legend>
+        @Html.TextBoxFor(m => m.fantasia, new { @readonly = true })
+    </fieldset>
+</div>
+
+<div class="col-lg-3 div">
+    <fieldset>
+        <legend class="text-left">@Html.DisplayNameFor(m => m.motivo_situacao)</legend>
+        @Html.TextBoxFor(m => m.motivo_situacao, new { @readonly = true })
+    </fieldset>
+</div>
+
+<div class="col-lg-3 div">
+    <fieldset>
+        <legend class="text-left">@Html.DisplayNameFor(m => m.data_situacao_especial)</legend>
+        @Html.TextBoxFor(m => m.data_situacao_especial, new { @readonly = true })
+    </fieldset>
+</div>
+
+<div class="col-lg-3 div">
+    <fieldset>
+        <legend class="text-left">@Html.DisplayNameFor(m => m.efr)</legend>
+        @Html.TextBoxFor(m => m.efr, new { @readonly = true })
+    </fieldset>
+</div>
+
+<div class="col-lg-3 div">
+    <fieldset>
+        <legend class="text-left">@Html.DisplayNameFor(m => m.capital_social)</legend>
+        @Html.TextBoxFor(m => m.capital_social, new { @readonly = true, @class = "real" })
+    </fieldset>
+</div>

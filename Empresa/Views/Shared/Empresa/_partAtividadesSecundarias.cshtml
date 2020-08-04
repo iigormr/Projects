@@ -1,0 +1,15 @@
+﻿@model CNPJ.Models.Empresa.AtividadesSecundarias
+
+<div class="col-lg-9">
+    <fieldset>
+        <legend class="text-left">@Html.DisplayNameFor(model => model.text)</legend>
+        @Html.TextBoxFor(model => model.text, new { @readonly = true })
+    </fieldset>
+</div>
+
+<div class="col-lg-3">
+    <fieldset>
+        <legend class="text-left">@Html.DisplayNameFor(model => model.code)</legend>
+        @Html.TextBoxFor(model => model.code, new { @readonly = true })
+    </fieldset>
+</div>
