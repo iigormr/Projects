@@ -12,7 +12,7 @@
                 <div class="row">
                     <fieldset>
                         <legend>Dados Principais</legend>
-                        <partial name="_partPrincipal"/>
+                        <partial name="~/Views/Shared/Empresa/_partPrincipal.cshtml" for="@Model" />
                     </fieldset>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                 <div class="row">
                     <fieldset>
                         <legend>Demais Informações</legend>
-                        <partial name="_partDetalhesAdicionais"/>
+                        <partial name="~/Views/Shared/Empresa/_partDetalhesAdicionais.cshtml" for="@Model" />
                     </fieldset>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="row">
                     <fieldset>
                         <legend>Endereço Comercial</legend>
-                        <partial name="_partEndereco"/>
+                        <partial name="~/Views/Shared/Empresa/_partEndereco.cshtml" for="@Model" />
                     </fieldset>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="row">
                     <fieldset>
                         <legend>Contato</legend>
-                        <partial name="_partContato"/>
+                        <partial name="~/Views/Shared/Empresa/_partContato.cshtml" for="@Model" />
                     </fieldset>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                         <legend>Atividade Principal</legend>
                         @foreach (var item in Model.atividade_principal)
                         {
-                            <partial name="_partAtividadePrincipal" for="@item"/>
+                            <partial name="~/Views/Shared/Empresa/_partAtividadePrincipal.cshtml" for="@item" />
                         }
                     </fieldset>
                 </div>
@@ -60,9 +60,9 @@
                 <div class="row">
                     <fieldset>
                         <legend>Atividades Secundárias</legend>
-                        @foreach (var item in Model.atividade_principal)
+                        @foreach (var item in Model.atividades_secundarias)
                         {
-                            <partial name="_partAtividadesSecundarias" for="@item"/>
+                            <partial name="~/Views/Shared/Empresa/_partAtividadesSecundarias.cshtml" for="@item" />
                         }
                     </fieldset>
                 </div>
@@ -74,7 +74,7 @@
                         <legend>Sócios</legend>
                         @foreach (var item in Model.qsa)
                         {
-                            <partial name="_partSocios" for="@item"/>
+                            <partial name="~/Views/Shared/Empresa/_partSocios.cshtml" for="@item" />
                         }
                     </fieldset>
                 </div>

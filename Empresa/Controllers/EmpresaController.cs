@@ -24,7 +24,7 @@ namespace Projects.Controllers.Empresa
         public ActionResult Buscar(string cnpj)
         {
             var CNPJ = cnpj.Replace(".", "").Replace("/", "").Replace("-", "");
-        
+
             try
             {
                 using (var client = new HttpClient())
