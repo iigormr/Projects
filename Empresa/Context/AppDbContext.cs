@@ -54,6 +54,6 @@ namespace Empresa.Context
         public DbSet<Billings> EMP_BILLINGS { get; set; }
         public DbSet<Extra> EMP_EXTRA { get; set; }
         public DbSet<Socio> EMP_SOCIO { get; set; }
-        public DbSet<EmpresaViewModel> EMP_PRINCIPAL { get; set; }
+        public DbSet<Models.Empresa.Empresa> EMP_PRINCIPAL { get; set; }
     }
 }

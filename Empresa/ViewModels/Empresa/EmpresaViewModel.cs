@@ -14,13 +14,13 @@ namespace Projects.ViewModels
         public string data_situacao { get; set; }
 
         [Display(Name = "Atividade Principal")]
-        public List<AtividadePrincipal> atividade_principal { get; set; } = new List<AtividadePrincipal>();
+        public List<AtividadePrincipal> atividade_principal { get; set; }
 
         [Display(Name = "Atividades Segundarias")]
-        public List<AtividadesSecundarias> atividades_secundarias { get; set; } = new List<AtividadesSecundarias>();
+        public List<AtividadesSecundarias> atividades_secundarias { get; set; }
 
         [Display(Name = "Líder")] 
-        public List<Socio> qsa { get; set; } = new List<Socio>();
+        public List<Socio> qsa { get; set; }
 
         [Display(Name = "Complemento")]
         public string complemento { get; set; }
